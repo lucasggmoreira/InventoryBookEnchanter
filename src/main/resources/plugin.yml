@@ -2,4 +2,9 @@ name: InventoryBookEnchanter
 version: '1.0'
 main: me.lucasggmoreira.inventoryClickEnchanter.MainClass
 api-version: '1.20'
+commands:
+  ibe:
+    description: This is the core command of the plugin!
+    usage: /<command>
+    permission: ibe.bookCommand
 
