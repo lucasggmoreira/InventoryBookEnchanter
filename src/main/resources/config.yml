@@ -1,12 +1,23 @@
 # Configuration File
 
+
+# Book Configurations:
+###########################################################################################
 # If true, everyone will be able to enchant any item with any enchantment possible
-allow-unsafe-enchantments: false
+allow-unsafe-book-enchantments: false
 # default: false
 
 # If true, the enchantments will be able to be stacked, like in an anvil
 # Ex: Protection 1 + Protection 1 = Protection 2
-enchantments-can-be-stacked: true
+book-enchantments-can-be-stacked: true
 # default: true
+###########################################################################################
 
+
+# Command Configurations:
+###########################################################################################
+# If true, the user will be able to enchant any item with any level of enchantment
+allow-unsafe-command-enchantments: false
+# default: false
+###########################################################################################
 
