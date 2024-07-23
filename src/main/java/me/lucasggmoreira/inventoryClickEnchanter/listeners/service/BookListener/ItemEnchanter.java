@@ -20,8 +20,11 @@ public class ItemEnchanter {
     private ItemStack book;
     private ItemStack enchantedItem;
 
-    private final boolean allowUnsafeEnchantments;
-    private final boolean enchantmentsCanBeStacked;
+
+    final Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("InventoryBookEnchanter");
+
+    private final boolean allowUnsafeEnchantments = plugin.getConfig().getBoolean("allow-unsafe-book-enchantments");
+    private final boolean enchantmentsCanBeStacked = plugin.getConfig().getBoolean("book-enchantments-can-be-stacked");
 
     private Map<Enchantment, Integer> bookEnchantments;
     private int foundEnchantments;
@@ -29,12 +32,10 @@ public class ItemEnchanter {
     private int invalidEnchantments;
 
 
+
     public ItemEnchanter(InventoryClickEvent event) {
-        final Plugin plugin = Bukkit.getServer().getPluginManager().getPlugin("InventoryBookEnchanter");
         this.event = event;
         this.player = (Player) event.getWhoClicked();
-        this.allowUnsafeEnchantments = plugin.getConfig().getBoolean("allow-unsafe-enchantments");
-        this.enchantmentsCanBeStacked = plugin.getConfig().getBoolean("enchantments-can-be-stacked");
     }
 
     public Player getPlayer() {
