@@ -6,5 +6,6 @@ commands:
   ibe:
     description: This is the core command of the plugin!
     usage: /<command>
+    aliases: [inventorybookenchanter]
     permission: ibe.bookCommand
 
